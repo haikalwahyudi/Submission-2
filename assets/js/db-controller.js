@@ -23,3 +23,20 @@ const saveClub = club => {
         })
     });
 }
+
+const getAllClub = () =>{
+    return new Promise((resolve, reject) =>{
+        idbPromised
+        .then(db =>{
+            const transaction = db.transaction("tb_clubs", `readonly`);
+            return transaction.objectStore("tb_clubs").getAll();
+        })
+        .then(data =>{
+            if(data !== undefined){
+                resolve(data);
+            }else{
+                reject(new Error(transaction.onerror));
+            }
+        })
+    });
+}
