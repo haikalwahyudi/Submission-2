@@ -187,22 +187,43 @@ function getSavedTeams(){
         let dataClub = '';
         dataClubSave.forEach(club => {
             dataClub +=`
-            <div class="col s12 m4" >
-            <div class="card large">
-            <div class="card-image waves-block">
+            <div class="col s12 m12" >
+            <div class="card">
+            <hr>
+            <div class="card-image waves-effect waves-block waves-light small">
                 <img src="${club.crestUrl}" alt="Badge">
             </div>
             <div class="card-content waves-block center-align">
-                <span class="card-title text-darken-4"><strong>${club.name}</strong></span>
-                <button class="btn orange darken-2 waves-effect">Add To Favotite</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Club Name</td>
+                            <td>:</td>
+                            <td>${club.name}</td>
+                        </tr>
+                    </thead>
+                </table>
             </div>
             <div class="card-action center-align">
-                <a href="../pages/jadwal.html?id=${club.id}" class="btn deep-purple darken-3 waves-effect">Match Schedule</a>
+                <button class="btn red darken-2 waves-effect delete" id="${club.id}">Remove</button>
             </div>
             </div>
             </div>
             `;
         });
         document.getElementById("fav").innerHTML = dataClub;
+        //const del = document.querySelectorAll(".delete");
+
+        let remove = document.querySelectorAll(".delete");
+        for(let button of remove){
+            button.addEventListener('click', (event) =>{
+                let id = event.target.id;
+                console.log(id);
+                deleteClub(id).then(() =>{
+                    getSavedTeams();
+                })
+            });
+        }
+
     });
 }

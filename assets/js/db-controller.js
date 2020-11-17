@@ -40,3 +40,23 @@ const getAllClub = () =>{
         })
     });
 }
+
+const deleteClub = id => {
+    return new Promise((resolve, reject) => {
+        idbPromised
+        .then(db =>{
+            const transaction = db.transaction("tb_clubs", `readwrite`);
+            transaction.objectStore("tb_clubs").delete(parseInt(id));
+            return transaction;
+        })
+        .then(transaction =>{
+            if(transaction.complete){
+                resolve(true);
+                console.log("Berhasil Dihapus");
+                alert("Data berhasil dihapus");
+            }else{
+                reject(new Error(transaction.onerror));
+            }
+        })
+    });
+}
