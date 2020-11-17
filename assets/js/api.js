@@ -118,7 +118,6 @@ const getTeams = () =>{
                 });
                 
         });
-    //});
 }
 
 const getMatchById = () =>{
@@ -181,28 +180,3 @@ const getMatchById = () =>{
     });
     
 }
-// function getSavedTeams() {
-//   getAll().then(function(teams) {
-//     console.log(teams);
-//     // Menyusun komponen card artikel secara dinamis
-//     var teamsHTML = "";
-//     teams.forEach(function(match) {
-//       //var description = team.post_content.substring(0,100);
-//       teamsHTML += `
-//                   <tr>
-//                         <td colspan="3">
-//                         <h5 class=" text-bold">${match.competition.name}</h5>
-//                         <span>${match.utcDate}</span>
-//                         </td>
-//                         </tr>
-//                         <tr class="text-bold">
-//                         <td><h6>${match.homeTeam.name}</h6></td>
-//                         <td>VS</td>
-//                         <td><h6>${match.awayTeam.name}</h6></td>
-//                     </tr>
-//                 `;
-//     });
-//     // Sisipkan komponen card ke dalam elemen dengan id #body-content
-//     document.getElementById("body-content").innerHTML = teamsHTML;
-//   });
-// }
