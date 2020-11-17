@@ -179,3 +179,30 @@ const getMatchById = () =>{
     })
     });
 }
+
+function getSavedTeams(){
+    getAllClub()
+    .then(dataClubSave =>{
+        console.log(dataClubSave);
+        let dataClub = '';
+        dataClubSave.forEach(club => {
+            dataClub +=`
+            <div class="col s12 m4" >
+            <div class="card large">
+            <div class="card-image waves-block">
+                <img src="${club.crestUrl}" alt="Badge">
+            </div>
+            <div class="card-content waves-block center-align">
+                <span class="card-title text-darken-4"><strong>${club.name}</strong></span>
+                <button class="btn orange darken-2 waves-effect">Add To Favotite</button>
+            </div>
+            <div class="card-action center-align">
+                <a href="../pages/jadwal.html?id=${club.id}" class="btn deep-purple darken-3 waves-effect">Match Schedule</a>
+            </div>
+            </div>
+            </div>
+            `;
+        });
+        document.getElementById("fav").innerHTML = dataClub;
+    });
+}
