@@ -164,7 +164,7 @@ const getMatchById = () =>{
                 <tr>
                     <td colspan="3">
                         <h5 class=" text-bold">${match.competition.name}</h5>
-                        <span>${match.utcDate}</span>
+                        <span>${moment(match.utcDate).format('LLLL')}</span>
                     </td>
                 </tr>
                 <tr class="text-bold">
