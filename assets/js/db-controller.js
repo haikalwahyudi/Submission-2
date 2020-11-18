@@ -16,7 +16,8 @@ const saveClub = club => {
         .then(transaction => {
             if(transaction.complete){
                 resolve(true);
-                console.log("Berhasil disimpan");
+                //console.log("Berhasil disimpan");
+                M.toast({html: 'Club Saved to Favorite', classes: 'green rounded'});
             }else{
                 reject(new error(transaction.onerror))
             }
@@ -53,6 +54,7 @@ const deleteClub = id => {
             if(transaction.complete){
                 resolve(true);
                 console.log("Berhasil Dihapus");
+                M.toast({html: 'Club Removed', classes: 'red rounded'});
             }else{
                 reject(new Error(transaction.onerror));
             }
