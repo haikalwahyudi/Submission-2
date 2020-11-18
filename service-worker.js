@@ -14,8 +14,7 @@ const urlsToCache = [
     "/pages/favorites.html",
     "/pages/jadwal.html",
     "/manifest.json",
-    "/assets/image/iconpwa.png",
-    "/assets/image/192x192.png",
+    "/assets/image/iconPWA.png",
 ];
 
 self.addEventListener("install", event => {

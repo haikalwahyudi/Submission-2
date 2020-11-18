@@ -6,16 +6,16 @@
     "description": "Application PWA",
     "start_url": "/index.html",
     "display": "standalone",
-    "background_color": "#376cff",
-    "theme_color": "#376cff",
+    "background_color": "#00e676",
+    "theme_color": "#00e676",
     "icons": [
         {
-        "src": "assets/image/iconpwa.png",
+        "src": "assets/image/iconPWA.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any maskable"
     },{
-        "src": "assets/image/192x192.png",
+        "src": "assets/image/iconPWA.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any maskable"
