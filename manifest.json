@@ -1,5 +1,7 @@
 {
     "name": "Football App",
+    "push_name": "Push Notifications FCM",
+    "gcm_sender_id": "567908731702",
     "short_name": "Football App",
     "description": "Application PWA",
     "start_url": "/index.html",
