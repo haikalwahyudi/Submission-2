@@ -109,15 +109,10 @@ const getTeams = () =>{
                         saveClub(data);
                         //console.log(data);
                     })
-                    
-                        
                 });
-                
             });
-                
-                });
-                
-        });
+        });            
+    });
 }
 
 const getMatchById = () =>{
