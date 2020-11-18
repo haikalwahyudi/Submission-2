@@ -40,21 +40,11 @@ self.addEventListener("fetch", event => {
             })
         );
     }else{
-    event.respondWith(
-        caches.
-        match
-        (event.request, {cacheName: CACHE_NAME})
-            .then( response => {
-                if (response) {
-                    console.log(`ServiceWorker: Gunakan aset dari cache: `, response.url);
-                    return response;
-                }
-
-                console.log(`ServiceWorker: Memuat aset dari server: `, event.request.url
-                );
-                return fetch(event.request);
-            })
-        );
+     event.respondWith(
+      caches.match(event.request, { ignoreSearch: true }).then(function(response) {
+        return response || fetch (event.request);
+      })
+    )
     }
 });
 
