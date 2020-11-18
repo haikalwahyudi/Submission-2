@@ -53,7 +53,6 @@ const deleteClub = id => {
             if(transaction.complete){
                 resolve(true);
                 console.log("Berhasil Dihapus");
-                alert("Data berhasil dihapus");
             }else{
                 reject(new Error(transaction.onerror));
             }
