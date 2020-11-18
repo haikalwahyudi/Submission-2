@@ -188,7 +188,7 @@ function getSavedTeams(){
         dataClubSave.forEach(club => {
             dataClub +=`
             <div class="col s12 m6" >
-            <div class="card">
+            <div class="card large">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="${club.crestUrl}">
             </div>
