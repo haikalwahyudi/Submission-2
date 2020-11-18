@@ -187,25 +187,49 @@ function getSavedTeams(){
         let dataClub = '';
         dataClubSave.forEach(club => {
             dataClub +=`
-            <div class="col s12 m12" >
+            <div class="col s12 m6" >
             <div class="card">
-            <hr>
-            <div class="card-image waves-effect waves-block waves-light small">
-                <img src="${club.crestUrl}" alt="Badge">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="${club.crestUrl}">
             </div>
-            <div class="card-content waves-block center-align">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Club Name</td>
-                            <td>:</td>
-                            <td>${club.name}</td>
-                        </tr>
-                    </thead>
-                </table>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4 center-align text-bold"><strong>${club.name}</strong><i class="material-icons right">more_vert</i></span>
             </div>
             <div class="card-action center-align">
                 <button class="btn red darken-2 waves-effect delete" id="${club.id}">Remove</button>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4 center-align"><strong>Club</strong><i class="material-icons right">close</i></span>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Name</th>
+                        <th>:</th>
+                        <td>${club.name}</td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <th>:</th>
+                        <td>${club.address}</td>
+                    </tr>
+                    <tr>
+                        
+                        <th>Founded</th>
+                        <th>:</th>
+                        <td>${club.founded}</td>
+                    </tr>
+                    <tr>
+                        <th>Club Color</th>
+                        <th>:</th>
+                        <td>${club.clubColors}</td>
+                    </tr>
+                    <tr>
+                        <th>Venue</th>
+                        <th>:</th>
+                        <td>${club.venue}</td>
+                    </tr>
+                <tbody>
+            </table>
             </div>
             </div>
             </div>
