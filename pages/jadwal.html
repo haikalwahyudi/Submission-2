@@ -17,7 +17,7 @@
 <body>
     <nav class="teal" role="navigation">
         <div class="nav-wrapper container">
-            <a href="#" class="brand-logo" id="logo-container">Football App</a>
+            <a href="./../" class="brand-logo" id="logo-container">Football App</a>
             <a href="./../" class="sidenav-trigger" data-target="nav-mobile">
                 <i class="material-icons waves-effect">arrow_back</i>
             </a>
@@ -36,11 +36,6 @@
         </table> 
         </div>
     </div>
-    <div class="fixed-action-btn">
-    <a class="btn-floating btn-large green" id="save">
-    <i class="large material-icons">save</i>
-    </a>
-    </div>
 
     <script src="../assets/js/materialize.min.js"></script>
     <script src="../assets/js/api.js"></script>
@@ -54,13 +49,6 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const data = getMatchById();
-        const save = document.getElementById("save");
-        save.onclick = function() {
-        console.log("Tombol FAB di klik.");
-        data.then(match => {
-            saveClub(match);
-        })
-    }
+        getMatchById();
     });
 </script>

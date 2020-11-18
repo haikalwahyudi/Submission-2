@@ -200,7 +200,7 @@ function getSavedTeams(){
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4 center-align"><strong>Club</strong><i class="material-icons right">close</i></span>
-            <table>
+            <table class="striped">
                 <tbody>
                     <tr>
                         <th>Name</th>
