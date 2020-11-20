@@ -27,6 +27,17 @@ const error = error =>{
 }
 const clubId = idClub =>{
     return new Promise((resolve, reject) =>{
+        if('caches' in window){
+            caches.match(`${baseUrl}teams/${idClub}`)
+            .then(respon =>{
+                if(respon){
+                    respon.json()
+                    .then(data =>{
+                        resolve(data);
+                    })
+                }
+            })
+        }
         fetchAPI(`${baseUrl}teams/${idClub}`)
         .then(json)
         .then(respon =>{
