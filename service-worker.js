@@ -11,6 +11,8 @@ const urlsToCache = [
     "/assets/js/moment.js",
     "/assets/js/db-controller.js",
     "/assets/js/idb.js",
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+    "https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2",
     "/pages/home.html",
     "/pages/about.html",
     "/pages/contact.html",
